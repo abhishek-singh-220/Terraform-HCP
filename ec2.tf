@@ -1,3 +1,7 @@
+provider "aws" {
+  region = "var.aws_region"
+}
+
 variable "aws_region" {
   description = "The AWS region to deploy resources in"
   type        = string
@@ -10,6 +14,7 @@ variable "region"{
    us-east-1 = "ami-000750470f5687d65"
  }
 }
+
 
 
 resource "aws_instance" "myec2" {
