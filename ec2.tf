@@ -18,11 +18,4 @@ variable "region"{
 
 
 
-resource "aws_instance" "myec2" {
-  ami           = var.region[var.aws_region]
-  instance_type = "t3.micro"
 
-  tags = {
-    Name = "FirstEc2Instance"
-  }
-}
