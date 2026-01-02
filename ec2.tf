@@ -8,7 +8,7 @@ variable "region"{
 
 
 resource "aws_instance" "myec2" {
-  ami           = var.region
+  ami           = var.region[var.region]
   instance_type = "t3.micro"
 
   tags = {
